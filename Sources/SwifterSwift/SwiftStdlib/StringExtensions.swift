@@ -471,19 +471,6 @@ public extension String {
     }
     #endif
 
-    #if canImport(Foundation)
-    /// SwifterSwift: Double value from string (if applicable).
-    ///
-    /// - Parameter locale: Locale (default is Locale.current)
-    /// - Returns: Optional Double value from given string.
-    func double(locale: Locale = .current) -> Double? {
-        let formatter = NumberFormatter()
-        formatter.locale = locale
-        formatter.allowsFloats = true
-        return formatter.number(from: self)?.doubleValue
-    }
-    #endif
-
     #if canImport(CoreGraphics) && canImport(Foundation)
     /// SwifterSwift: CGFloat value from string (if applicable).
     ///
